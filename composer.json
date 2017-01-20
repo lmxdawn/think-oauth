@@ -1,0 +1,27 @@
+{
+    "name": "lmxdawn/think-oauth",
+    "type": "library",
+    "description": "auth package",
+    "keywords": ["auth"],
+    "homepage": "https://github.com/lmxdawn/think-oauth",
+    "license": "Apache-2.0",
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Lan Ming Xiang",
+            "email": "lmxdawn@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/lmxdawn/think-oauth/issues"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "lmxdawn\\oauth\\": "src/"
+        }
+    }
+}
