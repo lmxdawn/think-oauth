@@ -1,20 +1,20 @@
 <?php
 // +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
+// | ThinkPHP 5 [ WE CAN DO IT JUST THINK IT ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2016 .
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Author: 黎明晓 <lmxdawn@gmail.com>
 // +----------------------------------------------------------------------
 
 namespace lmxdawn\oauth;
 
 /**
- * 第三方登录基础类
+ * 登录类
  */
-abstract class Driver
+class OAuth
 {
 
 }
