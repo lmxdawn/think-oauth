@@ -10,7 +10,7 @@
 // +----------------------------------------------------------------------
 
 
-namespace lmxdawn\oauth\command;
+namespace lmxdawn\oauth;
 
 use think\Session;
 
@@ -19,8 +19,6 @@ use think\Session;
  */
 abstract class Driver
 {
-    // 实例
-    protected static $instance;
     //参数配置
     protected $options = [];
 
@@ -28,10 +26,36 @@ abstract class Driver
     protected $state;
 
     //access_token
-    protected $access_token;
+    protected $access_token = [];
 
     // openid
     protected $openid;
+
+
+    /**
+     * 调用登录
+     * @return mixed
+     */
+    abstract public function login();
+
+    /**
+     * 获取accesstoken
+     * @return mixed
+     */
+    abstract public function accessToken();
+
+    /**
+     * 获取openid
+     * @return $this
+     */
+    abstract public function openid();
+
+    /**
+     * 获取用户信息
+     * @return mixed
+     */
+    abstract public function userInfo();
+
 
     /**
      * 发送HTTP请求方法，目前只支持CURL发送请求
@@ -42,7 +66,7 @@ abstract class Driver
      * @param  string $ship   #参数
      * @return array          响应数据
      */
-    protected function _request($url, $method = 'get', $data = '', $param, $ship = ''){
+    protected function _request($url, $method = 'get', $data = '', $param = [], $ship = ''){
         $opts = array(
             CURLOPT_TIMEOUT        => 30,//要求结果为字符串且输出到屏幕上
             CURLOPT_RETURNTRANSFER => 1,
